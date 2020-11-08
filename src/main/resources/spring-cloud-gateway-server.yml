@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: spring-cloud-number
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/number/**
+        - id: spring-cloud-address
+          uri: http://localhost:8086/
+          predicates:
+            - Path=/address/**

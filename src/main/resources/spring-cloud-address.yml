@@ -1,2 +1,9 @@
+server:
+  port: 8086
+
 name:
   service: address
+
+feign:
+  hystrix:
+    enabled: true
